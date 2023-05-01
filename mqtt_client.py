@@ -17,7 +17,8 @@ def on_connect(self, mosq, obj, rc):
 
 def on_message(mosq, obj, msg):
     line = str(msg.payload)
-    line = line.strip(str(b'\r\n\x00'))
+    line = line.rstrip(str(b'rn\x00'))
+    line = line.lstrip("b'")
     data = line.split('/')
     print("x = " + data[0] + ", y = " + data[1] + ", z = " + data[2])
     #print("[Received] Topic: " + msg.topic + ", Message: " + str(msg.payload) + "\n")

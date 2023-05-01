@@ -117,7 +117,7 @@ int main() {
     printf("Ready to close MQTT Network......\n");
 
     if ((rc = client.unsubscribe(topic)) != 0) {
-            printf("Failed: rc from unsubscribe was %d\n", rc);
+        printf("Failed: rc from unsubscribe was %d\n", rc);
     }
     if ((rc = client.disconnect()) != 0) {
     printf("Failed: rc from disconnect was %d\n", rc);
