@@ -98,12 +98,6 @@ int main() {
 
     mqtt_thread.start(callback(&mqtt_queue, &EventQueue::dispatch_forever));
 
-    int num = 0;
-    //while (num != 5) {
-    //        client.yield(100);
-    //        ++num;
-    //}
-    //ThisThread::sleep_for(3s);
     while (1) {
         if (closed) break;
         acc.GetAcceleromterSensor(acc_data);
