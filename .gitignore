@@ -1,0 +1,10 @@
+.build
+.mbed
+projectfiles
+*.py*
+mbed-os
+BUILD
+
+wifi-ism43362
+paho_mqtt
+bsp-b-l475e-iot01
